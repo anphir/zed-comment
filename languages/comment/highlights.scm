@@ -14,7 +14,6 @@
     )
     "text" @comment.note
     ; TODO: Complete list of tags to be highlighted as NOTE.
-    ;   Check which tag names are supported by tree-sitter-comment.
     (#any-of? @capture "NOTE" "INFO")
 )
 
