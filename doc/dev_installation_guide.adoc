@@ -1,0 +1,165 @@
+= Comment Highlighting Development Extension Installation Guide
+:sectnums:
+
+== Before Getting Started
+
+To give the experimental "`comment language extension`" a try, you need to be comfortable doing the following:
+
+* Edit your local Zed configuration file (`settings.json`).
+* Clone git repositories.
+* Create and edit files within the directories of these clones.
+* Install Zed development extensions.
+
+
+== Procedure
+
+This procedure uses the https://github.com/zed-extensions/scheme.git[Scheme language extension] as example.
+Following the steps described below, you will end up with an -- eventually additional -- custom variant of the extension with comment highlighting enabled.
+
+
+=== Update Zed Settings
+
+. Open Zed's `settings.json` for editing.
+
+. Insert or update the section named `experimental.theme_overrides`, so it contains all the syntax styles listed in the example below.
+Style names _must_ be kept as shown, color etc. may be customized.
+When adding styles to already existing ones, make sure you do not end up with duplicate entries.
+Style names must be unique.
++
+.Style configuration example.
+[source,json]
+----
+  "experimental.theme_overrides": {
+    "syntax": {
+      "comment.note": {
+        "color": "#6060ff",
+        "font_style": "italic"
+      },
+      "comment.note.name": {
+        "color": "#6060ff",
+        "font_style": "italic",
+        "font_weight": 700
+      },
+      "comment.todo": {
+        "color": "#00a0aa",
+        "font_style": "italic"
+      },
+      "comment.todo.name": {
+        "color": "#00a0aa",
+        "font_style": "italic",
+        "font_weight": 700
+      },
+      "comment.warning": {
+        "color": "#ccaa00",
+        "font_style": "italic"
+      },
+      "comment.warning.name": {
+        "color": "#ddaa00",
+        "font_style": "italic",
+        "font_weight": 700
+      },
+      "comment.error": {
+        "color": "#dd0000",
+        "font_style": "italic"
+      },
+      "comment.error.name": {
+        "color": "#dd0000",
+        "font_style": "italic",
+        "font_weight": 700
+      }
+    }
+  },
+----
+
+
+=== Clone the git Repositories
+
+To just install the latest revisions, a shallow clone (argument `--depth=1`) will suffice.
+
+. Change to the directory you wish to clone the repositories into.
+
+. Clone the "`comment extension`" repository.
++
+.Clone using the command line
+[source,sh]
+git clone --depth=1 https://github.com/anphir/zed-comment.git
++
+There should now be a sub-directory named `zed-comment` containing the clone.
+
+. Clone the "`Scheme extension`" repository.
++
+.Clone using the command line
+[source,sh]
+git clone --depth=1 https://github.com/zed-extensions/scheme.git
++
+There should now be a sub-directory named `scheme` containing the clone.
+
+
+=== Modify the Scheme Extension
+
+. Open the file `scheme/extension.toml` for editing.
+
+. Change the line `id = "scheme"` to `id = "scheme-comment"`. +
+This ensures there will be no clash of IDs and the modified extension could be installed alongside an unmodified version.
+
+. Save and close the file.
+
+. Open the file `scheme/languages/scheme/config.toml` for editing.
+
+. Change the line `name = "Scheme"` to `name = "Scheme + Comment"`. +
+This ensures the modified extension will show up with a distinct name.
+
+. Save and close the file.
+
+. Create a new file at `scheme/languages/scheme/injections.scm`.
+
+. Open the file for editing.
+
+. Copy & paste the query listed below into the file.
++
+.injections.scm
+[source,scheme]
+----
+((comment) @content
+    (#set! injection.language "comment"))
+----
+
+. Save and close the file.
+
+
+=== Install Development Extensions
+
+When installing a development extension, keeping an eye on Zed's log may be helpful to identify errors.
+An easy way to do this is starting Zed from a terminal to run in foreground and have it display log messages in the terminal.
+
+[source,sh]
+zed --foreground
+
+. Open Zed`s extension view.
+
+. Click the button `Install Dev Extension`. +
+A file selection dialog should be displayed.
+
+. Locate the directory containing the cloned "`comment extension`"  and select the `zed-comment` directory. +
+Zed should now take a short time to install the extension and it should show up in the list of installed extensions.
+
+. Click the button `Install Dev Extension` once more.
+
+. Locate the directory containing the cloned "`Scheme extension`"  and select the `scheme` directory. +
+Zed should now take a short time to install the extension it should show up in the list of installed extensions.
+
+
+=== Test Comment Highlighting
+
+. Open a Scheme file, e.g. the previously created `injections.scm` or create a new one.
+
+. Ensure the language used for the file is `Scheme + Comment`.
+Eventually change it manually.
+
+. Insert a comment line. +
+Scheme comments start with `;`.
+Do not forget to end the tag with the mandatory `:`.
++
+.Comment example
+[source,scheme]
+; TODO: Enjoy Scheme comment highlighting.

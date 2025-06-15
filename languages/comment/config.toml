@@ -1,0 +1,6 @@
+name = "Comment Highlighting"
+grammar = "comment"
+# With Zed v0.190.5 these two properties need to be defined,
+# even if this "Comment Language" does not use its own source files.
+path_suffixes = ["comment"]
+line_comments = ["# "]
