@@ -10,15 +10,15 @@ An experimental extension for the https://zed.dev/[Zed editor] to enable highlig
 The extension implements a generic "`comment language`" which may be injected in other Zed language extensions to enable highlighting of comments annotated with `TODO`, `FIXME`, ... .
 This works similar to highlighting e.g. JavaScript embedded in an HTML document.
 
-It uses the https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-commit] grammar, specific https://github.com/tree-sitter/tree-sitter.git[Tree-sitter] highlighting queries and a set of matching highlight style definitions.
+It uses the https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-comment] grammar, specific https://github.com/tree-sitter/tree-sitter.git[Tree-sitter] highlighting queries and a set of matching highlight style definitions.
 
 .Zed highlighting single line comments.
-image::screenshot.png[,45%]
+image::screenshot.png[,50%]
 
 
 == Current State
 
-While https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-commit] supports a wide range of comment tag names, in its current experimental state this extension highlights only a selected few of them, partitioned into four groups.
+While https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-comment] supports a wide range of comment tag names, in its current experimental state this extension highlights only a selected few of them, partitioned into four groups.
 
 Note group:: `INFO`, `TODO`
 
