@@ -146,7 +146,7 @@ Zed should now take a short time to install the extension and it should show up 
 . Click the button `Install Dev Extension` once more.
 
 . Locate the directory containing the cloned "`Scheme extension`"  and select the `scheme` directory. +
-Zed should now take a short time to install the extension it should show up in the list of installed extensions.
+Zed should now take a short time to install the extension and it should show up in the list of installed extensions.
 
 
 === Test Comment Highlighting
