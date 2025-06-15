@@ -13,7 +13,7 @@ This works similar to highlighting e.g. JavaScript embedded in an HTML document.
 It uses the https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-commit] grammar, specific https://github.com/tree-sitter/tree-sitter.git[Tree-sitter] highlighting queries and a set of matching highlight style definitions.
 
 .Zed highlighting single line comments.
-image::screenshot.png[]
+image::screenshot.png[,45%]
 
 
 == Current State
