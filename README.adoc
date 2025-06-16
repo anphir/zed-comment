@@ -19,7 +19,9 @@ It uses the https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-commen
 image::screenshot-single-line.png[,50%]
 
 .Zed highlighting multi-line comments.
-image::screenshot-multi-line.png[,50%]
+image::screenshot-multi-line.png[,60%]
+
+---
 
 While https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-comment] supports a wide range of comment tag names, in its current experimental state this extension highlights only a selected few of them, partitioned into four groups.
 
