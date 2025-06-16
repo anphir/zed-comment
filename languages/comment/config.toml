@@ -1,6 +1,23 @@
 name = "Comment Highlighting"
 grammar = "comment"
-# With Zed v0.190.5 these two properties need to be defined,
-# even if this "Comment Language" does not use its own source files.
+# With Zed v0.190.5 this property needs to be defined,
+# otherwise the extensions will be silently defunct.
 path_suffixes = ["comment"]
-line_comments = ["# "]
+# WARNING: Currently this needs to include all line comment prefixes of all languages.
+#   This is a somewhat fragile approach.
+#   The prefixes need to be exactly the same as those defined in the `config.toml` of language extensions.
+#   Ideally the comment extension would inherit this from the embedding language.
+line_comments = [
+    # various languages
+    "# ", "; ", "// ",
+    # git commit (Zed built-in)
+    "#",
+    # Go Mod, Go Work (Zed built-in)
+    "//",
+    # Rust (Zed built-in)
+    "/// ", "//! ",
+    # Gleam (language extension included in Zed)
+    "/// ",
+    # HTML, XML
+    "<!-- "
+]
