@@ -30,7 +30,16 @@ Style names must be unique.
 [source,json]
 ----
   "experimental.theme_overrides": {
+    "hint.background": "#F0F0F0",
     "syntax": {
+      "comment": {
+        "color": "#606060",
+        "font_style": "italic"
+      },
+      "comment.doc": {
+        "color": "#606060",
+        "font_style": "italic"
+      },
       "comment.note": {
         "color": "#6060ff",
         "font_style": "italic"
@@ -39,6 +48,10 @@ Style names must be unique.
         "color": "#6060ff",
         "font_style": "italic",
         "font_weight": 700
+      },
+      "comment.note.user": {
+        "color": "#b060ff",
+        "font_style": "italic"
       },
       "comment.todo": {
         "color": "#00a0aa",
@@ -49,6 +62,10 @@ Style names must be unique.
         "font_style": "italic",
         "font_weight": 700
       },
+      "comment.todo.user": {
+        "color": "#9090aa",
+        "font_style": "italic"
+      },
       "comment.warning": {
         "color": "#ccaa00",
         "font_style": "italic"
@@ -58,6 +75,10 @@ Style names must be unique.
         "font_style": "italic",
         "font_weight": 700
       },
+      "comment.warning.user": {
+        "color": "#ccb090",
+        "font_style": "italic"
+      },
       "comment.error": {
         "color": "#dd0000",
         "font_style": "italic"
@@ -66,6 +87,10 @@ Style names must be unique.
         "color": "#dd0000",
         "font_style": "italic",
         "font_weight": 700
+      },
+      "comment.error.user": {
+        "color": "#dd9000",
+        "font_style": "italic"
       }
     }
   },

@@ -12,11 +12,14 @@ This works similar to highlighting e.g. JavaScript embedded in an HTML document.
 
 It uses the https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-comment] grammar, specific https://github.com/tree-sitter/tree-sitter.git[Tree-sitter] highlighting queries and a set of matching highlight style definitions.
 
-.Zed highlighting single line comments.
-image::screenshot.png[,50%]
-
 
 == Current State
+
+.Zed highlighting single-line comments.
+image::screenshot-single-line.png[,50%]
+
+.Zed highlighting multi-line comments.
+image::screenshot-multi-line.png[,50%]
 
 While https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-comment] supports a wide range of comment tag names, in its current experimental state this extension highlights only a selected few of them, partitioned into four groups.
 
@@ -28,10 +31,10 @@ Warning group:: `WARN`, `WARNING`
 
 Error group:: `BUG`, `ERROR`, `FIXME`
 
-Each group uses two highlighting styles, one for the comment tag name, the other for the comment text.
-The optional comment tag user and the surrounding brackets use the default comment highlighting.
+Each group uses three distinct styles to highlight comment tag name, comment tag user and comment text.
+The surrounding brackets and the trailing colon use default punctuation highlighting.
 
-The styles need to be added to Zed's `settings.json`, otherwise the default comment style will be used.
+The styles need to be added to Zed's `settings.json`, otherwise the default comment style will be applied.
 While the styles use fixed names (e.g. `comment.note.name`), color etc. can be customized.
 
 The link:doc/dev_installation_guide.adoc[guide] for trying out a development extension installation contains an example of the required settings.
@@ -44,9 +47,9 @@ Each Zed extension for a language featuring comments which shall be highlighted 
 This is done by defining a "`language injection`".
 Zed's online documentaton contains a https://zed.dev/docs/extensions/languages#code-injections[short description] of this mechanism.
 
-That means just installing the "`comment language extension`" will not cause any comments to be highlighted.
+Just installing the "`comment language extension`" will not cause any comments to be highlighted.
 At least with version 0.190.5 of Zed there seems to be no way to trigger comment highlighting from "`outside`" a language extension.
-The extensions need to be changed and updated versions installed.
+These extensions need to be changed and updated versions installed.
 For many languages this change should be small.
 
 Zed users who are willing to do a bit of tinkering and install development extensions may already give comment highlighting a try.
