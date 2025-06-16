@@ -103,7 +103,14 @@ There should now be a sub-directory named `scheme` containing the clone.
 This ensures there will be no clash of IDs and the modified extension could be installed alongside an unmodified version.
 
 . Change the line `name = "Scheme"` to `name = "Scheme + Comment"`. +
-This ensures the modified extension will show up with a distinct name.
+This ensures the modified extension will show up with a distinct name in the extensions view.
+
+. Save and close the file.
+
+. Open the file `scheme/languages/scheme/config.toml` for editing.
+
+. Change the line `name = "Scheme"` to `name = "Scheme + Comment"`. +
+This ensures the modified extension will show up with a distinct name in the language selectors.
 
 . Save and close the file.
 
