@@ -30,16 +30,7 @@ Style names must be unique.
 [source,json]
 ----
   "experimental.theme_overrides": {
-    "hint.background": "#F0F0F0",
     "syntax": {
-      "comment": {
-        "color": "#606060",
-        "font_style": "italic"
-      },
-      "comment.doc": {
-        "color": "#606060",
-        "font_style": "italic"
-      },
       "comment.note": {
         "color": "#6060ff",
         "font_style": "italic"
@@ -93,10 +84,10 @@ Style names must be unique.
         "font_style": "italic"
       },
       /* INFO:
-         Define comment.uri.note, comment.uri.todo, comment.uri.warning,
-         comment.uri.error for distinct styling. */
+         Define any of comment.note.uri, comment.todo.uri, comment.warning.uri,
+         comment.error.uri for distinct styling. */
       "comment.uri": {
-        "color": "#0000ff"
+        "color": "#0000ee"
       }
     }
   },

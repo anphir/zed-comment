@@ -14,7 +14,7 @@
         ")"? @punctuation.bracket
         ":"? @punctuation.delimiter
     )
-    (uri)? @comment.uri.note
+    (uri)? @comment.note.uri
     (#any-of? @capture "NOTE" "INFO")
 ) @comment.note
 
@@ -27,7 +27,7 @@
         ")"? @punctuation.bracket
         ":"? @punctuation.delimiter
     )
-    (uri)? @comment.uri.todo
+    (uri)? @comment.todo.uri
     (#any-of? @capture "TODO" "WIP")
 ) @comment.todo
 
@@ -40,7 +40,7 @@
         ")"? @punctuation.bracket
         ":"? @punctuation.delimiter
     )
-    (uri)? @comment.uri.warning
+    (uri)? @comment.warning.uri
     (#any-of? @capture "WARNING" "WARN")
 ) @comment.warning
 
@@ -53,6 +53,6 @@
         ")"? @punctuation.bracket
         ":"? @punctuation.delimiter
     )
-    (uri)? @comment.uri.error
+    (uri)? @comment.error.uri
     (#any-of? @capture "BUG" "ERROR" "FIXME")
 ) @comment.error
