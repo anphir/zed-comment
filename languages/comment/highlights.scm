@@ -1,7 +1,6 @@
 ; TODO: tree-sitter-comment supports mostly arbitrary tag names.
 ;   Perhaps have a fall-through query highlighting these as NOTE?
 ; TODO: Support additional tag names?
-; TODO: Highlighting for URI?
 
 ; Note group.
 (_
@@ -15,6 +14,7 @@
         ")"? @punctuation.bracket
         ":"? @punctuation.delimiter
     )
+    (uri)? @comment.uri.note
     (#any-of? @capture "NOTE" "INFO")
 ) @comment.note
 
@@ -27,6 +27,7 @@
         ")"? @punctuation.bracket
         ":"? @punctuation.delimiter
     )
+    (uri)? @comment.uri.todo
     (#any-of? @capture "TODO" "WIP")
 ) @comment.todo
 
@@ -39,6 +40,7 @@
         ")"? @punctuation.bracket
         ":"? @punctuation.delimiter
     )
+    (uri)? @comment.uri.warning
     (#any-of? @capture "WARNING" "WARN")
 ) @comment.warning
 
@@ -51,13 +53,6 @@
         ")"? @punctuation.bracket
         ":"? @punctuation.delimiter
     )
+    (uri)? @comment.uri.error
     (#any-of? @capture "BUG" "ERROR" "FIXME")
 ) @comment.error
-
-; STASH
-;
-; Highlights all tag names of this comment group.
-; (tag
-;      (name) @capture @comment.note.name
-;      (#any-of? @capture "NOTE" "INFO")
-; )
