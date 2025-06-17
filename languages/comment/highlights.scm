@@ -4,12 +4,6 @@
 ; TODO: Highlighting for URI?
 
 ; Note group.
-;   Highlights all text nodes of this comment group.
-;   For long multi-line commits this might be a bit excessive, especially for error comments.
-; TODO: Would be nice if this were an option a user could turned off or on.
-; TODO: Optional highlighting of the tag user would also be nice.
-;   We could add another style e.g. comment.note.user or simply a comment.user if we want a single style1
-;   for all comment groups.
 (_
     ; Match only on the first occurence of tag.
     . (tag

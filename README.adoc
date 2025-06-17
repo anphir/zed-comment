@@ -15,11 +15,11 @@ It uses the https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-commen
 
 == Current State
 
-.Zed highlighting single-line comments.
-image::screenshot-single-line.png[,50%]
+.Zed highlighting line comments.
+image::screenshot-line-comment.png[,50%]
 
-.Zed highlighting multi-line comments.
-image::screenshot-multi-line.png[,60%]
+.Zed highlighting block comments.
+image::screenshot-block-comment.png[,60%]
 
 ---
 
