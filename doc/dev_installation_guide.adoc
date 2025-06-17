@@ -82,12 +82,6 @@ Style names must be unique.
       "comment.error.user": {
         "color": "#dd9000",
         "font_style": "italic"
-      },
-      /* INFO:
-         Define any of comment.note.uri, comment.todo.uri, comment.warning.uri,
-         comment.error.uri for distinct styling. */
-      "comment.uri": {
-        "color": "#0000ee"
       }
     }
   },
