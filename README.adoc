@@ -2,12 +2,12 @@
 :imagesdir: doc/image
 
 [abstract]
-An experimental extension for the https://zed.dev/[Zed editor] to enable highlighting of comments.
+An extension for the https://zed.dev/[Zed editor] to enable highlighting of alerts and URIs in comments.
 
 
 == Overview
 
-The extension implements a generic "`comment language`" which may be injected in other Zed language extensions to enable highlighting of comments annotated with `TODO`, `FIXME`, ... .
+The extension implements a generic "`comment language`" which may be injected in other Zed language extensions to enable highlighting of comments annotated with `TODO:`, `FIXME:`, ... .
 This works similar to highlighting e.g. JavaScript embedded in an HTML document.
 
 It uses the https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-comment] grammar, specific https://github.com/tree-sitter/tree-sitter.git[Tree-sitter] highlighting queries and a set of matching highlight style definitions.
@@ -27,16 +27,16 @@ While https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-comment] sup
 
 Note group:: `INFO`, `NOTE`
 
-Todo group:: `TODO`, `WIP`
+Todo group:: `TEST`, `TODO`, `WIP`
 
 Warning group:: `WARN`, `WARNING`
 
 Error group:: `BUG`, `ERROR`, `FIXME`
 
 Each group uses three distinct styles to highlight comment tag name, comment tag user and comment text.
-The surrounding brackets and the trailing colon use default punctuation highlighting.
+The surrounding brackets and the trailing colon use the current theme's punctuation styles, URIs the theme's URI link style.
 
-The styles need to be added to Zed's `settings.json`, otherwise the default comment style will be applied.
+Unless theme creators decide to include them, the custom styles for comment tag name, user and text need to be added to Zed's `settings.json`, otherwise the default comment style will be applied.
 While the styles use fixed names (e.g. `comment.note.name`), color etc. can be customized.
 
 The link:doc/dev_installation_guide.adoc[guide] for trying out a development extension installation contains an example of the required settings.
@@ -45,7 +45,7 @@ The link:doc/dev_installation_guide.adoc[guide] for trying out a development ext
 == Usage
 
 This "`comment language extension`" is only one piece of the puzzle.
-Each Zed extension for a language featuring comments which shall be highlighted needs to be adapted to use the comment extension.
+Each Zed extension for a language featuring comments to be highlighted needs to be adapted to use the comment extension.
 This is done by defining a "`language injection`".
 Zed's online documentaton contains a https://zed.dev/docs/extensions/languages#code-injections[short description] of this mechanism.
 

@@ -3,7 +3,7 @@ name = "Comment Highlighting"
 version = "0.1.0"
 schema_version = 1
 authors = ["anphir"]
-description = "Generic comment highlighting.\nPlease note that some languages do not support comment highlighting."
+description = "Highlighting of alerts (NOTE:, TODO:, ...) and URIs in comments for languages supporting this extension."
 repository = "https://github.com/anphir/zed-comment.git"
 
 [grammars.comment]

@@ -4,4 +4,5 @@ grammar = "comment"
 # otherwise the extensions will be silently defunct.
 path_suffixes = ["comment"]
 # This language is only for syntax highlighting via an injection into other languages.
+# Without it beeing hidden, toggling comments will not work.
 hidden = true
