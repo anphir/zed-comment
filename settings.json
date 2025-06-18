@@ -1,0 +1,85 @@
+{
+  "experimental.theme_overrides": {
+    "syntax": {
+      // Default style for comments.
+      // Probably already set in your local `settings.json`.
+      // Comments will fallback using this style if the styles below are not defined.
+      "comment": {
+        "color": "#606060",
+        "font_style": "italic"
+      },
+      // Custom style for note comments.
+      // Will be used for the whole note comment, including the text.
+      // Note comment tag name and note comment tag user will fallback using this style.
+      "comment.note": {
+        "color": "#6060ff",
+        "font_style": "italic"
+      },
+      // Custom style for the tag name in note comments.
+      "comment.note.name": {
+        "color": "#6060ff",
+        "font_style": "italic",
+        "font_weight": 700
+      },
+      // Custom style for the tag user in in note comments.
+      "comment.note.user": {
+        "color": "#b060ff",
+        "font_style": "italic"
+      },
+      // Custom style for todo comments.
+      // Will be used for the whole todo comment, including the text.
+      // Todo comment tag name and todo comment tag user will fallback using this style.
+      "comment.todo": {
+        "color": "#00a0aa",
+        "font_style": "italic"
+      },
+      // Custom style for the tag name in todo comments.
+      "comment.todo.name": {
+        "color": "#00a0aa",
+        "font_style": "italic",
+        "font_weight": 700
+      },
+      // Custom style for the tag user in in todo comments.
+      "comment.todo.user": {
+        "color": "#9090aa",
+        "font_style": "italic"
+      },
+      // Custom style for warning comments.
+      // Will be used for the whole warning comment, including the text.
+      // Warning comment tag name and warning comment tag user will fallback using this style.
+      "comment.warning": {
+        "color": "#ccaa00",
+        "font_style": "italic"
+      },
+      // Custom style for the tag name in warning comments.
+      "comment.warning.name": {
+        "color": "#ddaa00",
+        "font_style": "italic",
+        "font_weight": 700
+      },
+      // Custom style for the tag user in in warning comments.
+      "comment.warning.user": {
+        "color": "#ccb090",
+        "font_style": "italic"
+      },
+      // Custom style for error comments.
+      // Will be used for the whole error comment, including the text.
+      // Error comment tag name and error comment tag user will fallback using this style.
+      "comment.error": {
+        "color": "#dd0000",
+        "font_style": "italic"
+      },
+      // Custom style for the tag name in error comments.
+      "comment.error.name": {
+        "color": "#dd0000",
+        "font_style": "italic",
+        "font_weight": 700
+      },
+      // Custom style for the tag user in in error comments.
+      "comment.error.user": {
+        "color": "#dd9000",
+        "font_style": "italic"
+      }
+    }
+  }
+}

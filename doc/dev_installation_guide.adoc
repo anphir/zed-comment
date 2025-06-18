@@ -21,72 +21,16 @@ Following the steps described below, you will end up with an -- eventually addit
 
 . Open Zed's `settings.json` for editing.
 
-. Insert or update the section named `experimental.theme_overrides`, so it contains all the syntax styles listed in the example below.
+. Insert or update the section named `experimental.theme_overrides`, so it contains the syntax styles listed in the example below.
 Style names _must_ be kept as shown, color etc. may be customized.
 When adding styles to already existing ones, make sure you do not end up with duplicate entries.
 Style names must be unique.
 +
 .Style configuration example.
-[source,json]
+[source,jsonc]
 ----
-  "experimental.theme_overrides": {
-    "syntax": {
-      "comment.note": {
-        "color": "#6060ff",
-        "font_style": "italic"
-      },
-      "comment.note.name": {
-        "color": "#6060ff",
-        "font_style": "italic",
-        "font_weight": 700
-      },
-      "comment.note.user": {
-        "color": "#b060ff",
-        "font_style": "italic"
-      },
-      "comment.todo": {
-        "color": "#00a0aa",
-        "font_style": "italic"
-      },
-      "comment.todo.name": {
-        "color": "#00a0aa",
-        "font_style": "italic",
-        "font_weight": 700
-      },
-      "comment.todo.user": {
-        "color": "#9090aa",
-        "font_style": "italic"
-      },
-      "comment.warning": {
-        "color": "#ccaa00",
-        "font_style": "italic"
-      },
-      "comment.warning.name": {
-        "color": "#ddaa00",
-        "font_style": "italic",
-        "font_weight": 700
-      },
-      "comment.warning.user": {
-        "color": "#ccb090",
-        "font_style": "italic"
-      },
-      "comment.error": {
-        "color": "#dd0000",
-        "font_style": "italic"
-      },
-      "comment.error.name": {
-        "color": "#dd0000",
-        "font_style": "italic",
-        "font_weight": 700
-      },
-      "comment.error.user": {
-        "color": "#dd9000",
-        "font_style": "italic"
-      }
-    }
-  },
+include::../settings.json[]
 ----
-
 
 === Clone the git Repositories
 
