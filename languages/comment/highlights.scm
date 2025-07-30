@@ -5,9 +5,8 @@
         ; INFO: Styles for (, ), : chosen according to Rust's `highlighting.scm`.
         ; NOTE: The `(user)` part is optional.
         (
-            "(" @punctuation.bracket
+            ["(" ")"] @punctuation.bracket
             (user) @comment.note.user
-            ")" @punctuation.bracket
         )?
         ":" @punctuation.delimiter
     )
@@ -20,9 +19,8 @@
     . (tag
         (name) @tag_name @comment.todo.name
         (
-            "(" @punctuation.bracket
+            ["(" ")"] @punctuation.bracket
             (user) @comment.todo.user
-            ")" @punctuation.bracket
         )?
         ":" @punctuation.delimiter
     )
@@ -35,9 +33,8 @@
     . (tag
         (name) @tag_name @comment.warning.name
         (
-            "(" @punctuation.bracket
+            ["(" ")"] @punctuation.bracket
             (user) @comment.warning.user
-            ")" @punctuation.bracket
         )?
         ":" @punctuation.delimiter
     )
@@ -50,9 +47,8 @@
     . (tag
         (name) @tag_name @comment.error.name
         (
-            "(" @punctuation.bracket
+            ["(" ")"] @punctuation.bracket
             (user) @comment.error.user
-            ")" @punctuation.bracket
         )?
         ":" @punctuation.delimiter
     )
