@@ -1,7 +1,7 @@
 name = "Comment Highlighting"
 grammar = "comment"
-# At least with Zed v0.190.5 this property needs to be defined,
-# otherwise the extension will be silently defunct.
+# At least with Zed v0.190.5 this property needs to be defined and not empty.
+# Otherwise the extension will be silently defunct.
 path_suffixes = ["comment"]
 # This language is only for syntax highlighting via an injection into other languages.
 # Without it beeing hidden, toggling comments will not work.

@@ -1,3 +1,6 @@
+⚠️ Pull request https://github.com/zed-industries/extensions/pull/2865[#2865] attempting to add this to Zed extensions was closed in favour of https://github.com/zed-industries/extensions/pull/3393[#3393].
+This repository has become obsolete and will probably be removed in the near future. ⚠️
+
 = Zed Comment
 :imagesdir: doc/image
 
@@ -14,8 +17,6 @@ It uses the https://github.com/stsewd/tree-sitter-comment.git[tree-sitter-commen
 
 
 == Current State
-
-NOTE: Pending pull request https://github.com/zed-industries/extensions/pull/2865[#2865] at https://github.com/zed-industries/extensions[Zed Extensions].
 
 .Zed highlighting line comments.
 image::screenshot-line-comment.png[,50%]
